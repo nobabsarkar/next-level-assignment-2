@@ -1,3 +1,5 @@
+import { Model } from "mongoose";
+
 export type TTagsArray = {
   computer: string;
   peripherals: string;
@@ -20,16 +22,7 @@ export type TEcommerce = {
   description: string;
   price: number;
   category: string;
-  tags: TTagsArray[];
-  variants: [TVariants];
+  tags: TTagsArray;
+  variants: TVariants;
   inventory: TInventory;
 };
-// export type TEcommerce = {
-//   name: string;
-//   description: string;
-//   price: number;
-//   category: string;
-//   tags: [TTagsArray];
-//   variants: [TVariants];
-//   inventory: [TInventory];
-// };

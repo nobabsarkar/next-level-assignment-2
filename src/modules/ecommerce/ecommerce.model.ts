@@ -6,14 +6,14 @@ import {
   TVariants,
 } from "./ecommerce.interface";
 
-const tags = new Schema<TTagsArray>({
+const tagsName = new Schema<TTagsArray>({
   computer: { type: String, required: true },
   peripherals: { type: String, required: true },
   wireless: { type: String, required: true },
   ergonomic: { type: String, required: true },
 });
 
-const variants = new Schema<TVariants>({
+const variantsName = new Schema<TVariants>({
   type: { type: String, required: true },
   value: { type: String, required: true },
 });
@@ -28,8 +28,8 @@ const ecommerceSchema = new Schema<TEcommerce>({
   description: { type: String, required: true },
   price: { type: Number, required: true },
   category: { type: String, required: true },
-  tags: [tags],
-  variants: [variants],
+  tags: { tagsName },
+  variants: [{ variantsName }],
   inventory: [inventory],
 });
 

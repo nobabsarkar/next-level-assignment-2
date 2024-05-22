@@ -6,6 +6,24 @@ const sendData = async (payLoad: TEcommerce) => {
   return result;
 };
 
+const getAllEcommerceData = async () => {
+  const result = await Data.find();
+  return result;
+};
+
+const getSingleEcommerceDatas = async (id: string) => {
+  const result = await Data.findById(id);
+  return result;
+};
+
+const deleteSignleData = async (id: string) => {
+  const result = await Data.findByIdAndDelete(id);
+  return result;
+};
+
 export const DataCollection = {
   sendData,
+  getAllEcommerceData,
+  getSingleEcommerceDatas,
+  deleteSignleData,
 };
