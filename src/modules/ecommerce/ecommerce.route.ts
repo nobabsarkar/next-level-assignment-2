@@ -1,14 +1,18 @@
 import express, { Request, Response } from "express";
 import { DataControllers } from "./ecommerce.controller";
+import { TEcommerce } from "./ecommerce.interface";
+import { Data } from "./ecommerce.model";
 
 const router = express.Router();
 
-router.post("/api/products", DataControllers.createEcommerceData);
+router.post("/", DataControllers.createEcommerceData);
 
-router.get("/api/products", DataControllers.getEcommerceRoute);
+router.get("/", DataControllers.getEcommerceRoute);
 
-router.get("/api/products/:productId", DataControllers.getSingleRoutes);
+router.get("/:productId", DataControllers.getSingleRoutes);
 
-router.delete("/api/products/:productId", DataControllers.deleteSignleRoute);
+router.put("/:productId", DataControllers.updateSingleRoute);
+
+router.delete("/:productId", DataControllers.deleteSignleRoute);
 
 export const EcommerceRoutes = router;
