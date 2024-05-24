@@ -6,6 +6,12 @@ const sendOrderData = async (payLoad: TOrder) => {
   return result;
 };
 
+const getOrderRoute = async () => {
+  const result = await Order.find();
+  return result;
+};
+
 export const OrderCollection = {
   sendOrderData,
+  getOrderRoute,
 };
