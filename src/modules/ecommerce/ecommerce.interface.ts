@@ -1,5 +1,3 @@
-import { Model } from "mongoose";
-
 export type TTagsArray = {
   computer: string;
   peripherals: string;

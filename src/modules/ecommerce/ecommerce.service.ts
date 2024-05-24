@@ -11,7 +11,6 @@ const getAllEcommerceData = async (searchTerm?: string) => {
     const result = await Data.find();
     return result;
   } else {
-    console.log(searchTerm);
     const regex = new RegExp(searchTerm, "i");
     const result = await Data.find({
       $or: [

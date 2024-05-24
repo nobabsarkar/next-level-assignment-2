@@ -1,9 +1,9 @@
-import express, { Request, Response } from "express";
+import express from "express";
 import { DataControllers } from "./ecommerce.controller";
-import { TEcommerce } from "./ecommerce.interface";
-import { Data } from "./ecommerce.model";
 
 const router = express.Router();
+
+// all my route
 
 router.post("/", DataControllers.createEcommerceData);
 
