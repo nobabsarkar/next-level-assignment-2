@@ -2,17 +2,16 @@ import { Request, Response } from "express";
 import { DataCollection } from "./ecommerce.service";
 import { z } from "zod";
 import { TEcommerce } from "./ecommerce.interface";
+// import ecommerceValidation from "./ecommerce.validation";
 
 const createEcommerceData = async (req: Request, res: Response) => {
   try {
-    // const studentValidationSchema = z.object({
-    //   id:z.string(),
-    //   name:z.object({
-    //     name:
-    //   })
-    // })
+    // creating a schema validation using zod
+
+    // const zoodparsedData = ecommerceValidation.parse(req.body);
 
     const result = await DataCollection.sendData(req.body);
+    // const result = await DataCollection.sendData(zoodparsedData);
     res.json({
       success: true,
       message: "Product created successfully!",

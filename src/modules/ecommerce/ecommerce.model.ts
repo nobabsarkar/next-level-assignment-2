@@ -20,7 +20,7 @@ const variantsName = new Schema<TVariants>({
 
 const inventory = new Schema<TInventory>({
   quantity: { type: Number, required: true },
-  inStock: { type: Boolean, required: true, default: false },
+  inStock: { type: Boolean, required: true },
 });
 
 const ecommerceSchema = new Schema<TEcommerce>({
