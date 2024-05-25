@@ -6,8 +6,6 @@ import { TEcommerce } from "./ecommerce.interface";
 
 const createEcommerceData = async (req: Request, res: Response) => {
   try {
-    // creating a schema validation using zod
-
     // const zoodparsedData = ecommerceValidation.parse(req.body);
 
     const result = await DataCollection.sendData(req.body);
