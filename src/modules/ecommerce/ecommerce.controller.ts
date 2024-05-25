@@ -2,11 +2,12 @@ import { Request, Response } from "express";
 import { DataCollection } from "./ecommerce.service";
 import { z } from "zod";
 import { TEcommerce } from "./ecommerce.interface";
-// import ecommerceValidation from "./ecommerce.validation";
+import ecommerceValidation from "./ecommerce.validation";
+import TEcommerceSchema from "./ecommerce.validation";
 
 const createEcommerceData = async (req: Request, res: Response) => {
   try {
-    // const zoodparsedData = ecommerceValidation.parse(req.body);
+    const zoodparsedData = ecommerceValidation.parse(req.body);
 
     const result = await DataCollection.sendData(req.body);
     // const result = await DataCollection.sendData(zoodparsedData);

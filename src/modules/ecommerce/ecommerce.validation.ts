@@ -23,8 +23,8 @@
 //   price: z.number(),
 //   category: z.string(),
 //   tags: tagsValidation,
-//   variantsValidation: z.array(variantsValidation),
-//   inventory: z.array(inventoryValidation),
+//   variantsValidation: variantsValidation,
+//   inventory: inventoryValidation,
 // });
 
 // export default ecommerceValidation;
