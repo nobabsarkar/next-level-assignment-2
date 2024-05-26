@@ -1,5 +1,6 @@
 import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
+import globals from "@eslint/js";
 
 export default tseslint.config(
   eslint.configs.recommended,
